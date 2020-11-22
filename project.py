@@ -20,11 +20,6 @@ def menu_utama1():
 	
 			
 def pilihan():
-	x = int(input("Masukan Pilihan : "))
-
-	if x == 1:
-		mk = makanan()
-
 	pil = 1
 	while pil !=6:
 		print ("""
@@ -39,39 +34,38 @@ def pilihan():
 		pil = int(input("Masukkan pilihan anda : "))
 		print()
 		if pil == 1:
-			print ("")
-			x = int(input("Jumlah porsi : "))
-			mk = makanan()
-			mk.nasi_goreng(x)
+			mkn = int(input("Jumlah porsi : "))
+			jmlhpsn = mkn * 12000
+			print("Harga nasi goreng = Rp 12000")
+			print ("Total Harga = Rp ", jmlhpsn)
 			pil=6
 			
 		if pil == 2:
-			print ("")
-			x = int(input("Jumlah porsi : "))
-			mk = makanan()
-			mk.mie_ayam(x)
+			mkn = int(input("Jumlah porsi : "))
+			jmlhpsn = mkn * 11000
+			print("Harga Mie Ayam = Rp 11000")
+			print ("Total Harga = Rp ",jmlhpsn)
 			pil=6
 			
 		if pil == 3:
-			print ("")
-			x = int(input("Jumlah porsi : "))
-			mk = makanan()
-			mk.bihun_goreng(x)
+			mkn = int(input("Jumlah porsi : "))
+			jmlhpsn = mkn * 7500
+			print("Harga bihun goreng = Rp 7500")
+			print ("Total Harga = Rp ", jmlhpsn)
 			pil=6
 			
 		if pil == 4:
-			print ("")
-			x = int(input("Jumlah porsi : "))
-			mk = makanan()
-			mk.mie_goreng(x)
+			mkn = int(input("Jumlah porsi : "))
+			jmlhpsn = mkn * 8000
+			print ("Harga mie goreng = Rp 8000")
+			print ("Total Harga = Rp ", jmlhpsn)
 			pil=6
 			
 		if pil == 5:
-			print ("")
-			x = (input("Jumlah porsi : "))
-			mk = makanan()
-			mk.capcay(x)
-			print()
+			mkn = (input("Jumlah porsi : "))
+			jmlhpsn = mkn * 5000
+			print ("Harga capcay = Rp 5000")
+			print ("Total Harga = Rp ", jmlhpsn)
 			pil=6
 		else:
 			exit
@@ -81,7 +75,6 @@ def pilihan():
 
 
 	pil = 0
-	mn = minuman()
 	while pil !=6:
 		print ("""
 			Pilih Minuman
@@ -94,106 +87,75 @@ def pilihan():
 		pil = int(input("Masukkan pilihan anda : "))
 		print
 		if pil == 1:
-			print ("")
-			z = int(input("Jumlah gelas : "))
-			mn = minuman()
-			mn.air_mineral(z)
+			mnm = int(input("Jumlah gelas : "))
+			jmlhpsn2 = (mnm * 3000) 
+			print ("Harga Air Mineral = Rp 3000")
+			print ("Total Minuman = Rp ",jmlhpsn2)
 			pil=6
-			back_menu()
+			Total_seluruhnya = jmlhpsn + jmlhpsn2
+			print ("Total harga seluruh pesanan adalah ",Total_seluruhnya)
+			Mny = int(input("Masukkan jumlah uang "))
+			Kembalian = Mny - Total_seluruhnya
+			print("Total kembalian = ",Kembalian)
+			back_menu()			
+
 		if pil == 2:
-			print ("")
-			z = int(input("Jumlah gelas : "))
-			mn = minuman()
-			mn.es_teh_manis(z)
+			mnm = int(input("Jumlah gelas : "))
+			jmlhpsn2 = (mnm * 2000) 
+			print("Harga Es Teh Manis = Rp 2000")
+			print ("Total Minuman = Rp ",jmlhpsn2)
 			pil=6
+			Total_seluruhnya = jmlhpsn + jmlhpsn2
+			print ("Total harga seluruh pesanan adalah ",Total_seluruhnya)
+			Mny = int(input("Masukkan jumlah uang "))
+			Kembalian = Mny - Total_seluruhnya
+			print("Total kembalian = ",Kembalian)
+			
 			back_menu()
 		if pil == 3:
-			print ("")
-			z = int(input("Jumlah gelas : "))
-			mn = minuman()
-			mn.es_jeruk(z)
+			mnm = int(input("Jumlah gelas : "))
+			jmlhpsn2 = (mnm * 3500) 
+			print ("Harga Es Jeruk = Rp 3500")
+			print("Total Minuman = Rp ",jmlhpsn2)
 			pil=6
+			Total_seluruhnya = jmlhpsn + jmlhpsn2
+			print ("Total harga seluruh pesanan adalah ",Total_seluruhnya)
+			Mny = int(input("Masukkan jumlah uang "))
+			Kembalian = Mny - Total_seluruhnya
+			print("Total kembalian = ",Kembalian)
 			back_menu()
 		if pil == 4:
-			print ("")
-			z = int(input("Jumlah gelas : "))
-			mn = minuman()
-			mn.jus_alpukat(z)
+			mnm = int(input("Jumlah gelas : "))
+			jmlhpsn2 = (mnm * 5000) 
+			print ("Harga Jus Alpukat = Rp 5000")
+			print ("Total Minuman = Rp ",jmlhpsn2)
 			pil=6
+			Total_seluruhnya = jmlhpsn + jmlhpsn2
+			print ("Total harga seluruh pesanan adalah ",Total_seluruhnya)
+			Mny = int(input("Masukkan jumlah uang "))
+			Kembalian = Mny - Total_seluruhnya
+			print("Total kembalian = ",Kembalian)
 			back_menu()
 		if pil == 5:
-			print ("")
-			z = int(input("Jumlah gelas : "))
-			mn = minuman()
-			mn.jus_mangga(z)
+			mnm = int(input("Jumlah gelas : "))
+			jmlhpsn2 = (mnm * 4000) 
+			print ("Harga Jus Mangga = Rp 4000")
+			print ("Total Minuman = Rp ",jmlhpsn2)
 			pil=6
+			Total_seluruhnya = jmlhpsn + jmlhpsn2
+			print ("Total harga seluruh pesanan adalah ",Total_seluruhnya)
+			Mny = int(input("Masukkan jumlah uang "))
+			Kembalian = Mny - Total_seluruhnya
+			print("Total kembalian = ",Kembalian)
 			back_menu()
 		
 		  
-
-
-class makanan():
-	def nasi_goreng (self,x):
-		jmlhpsn = x * 7000
-		print("Harga nasi goreng = Rp 7000")
-		print ("Total Harga = Rp ", jmlhpsn)
-		return jmlhpsn
-	def mie_ayam (self,x):
-		jmlhpsn = x * 6000
-		print("Harga Mie Ayam = Rp 6000")
-		print ("Total Harga = Rp ",jmlhpsn)
-		return jmlhpsn
-	def bihun_goreng (self,x):
-		jmlhpsn = x * 7500
-		print("Harga bihun goreng = Rp 7500")
-		print ("Total Seluruhnya = Rp ", jmlhpsn)
-		return jmlhpsn
-	def mie_goreng (self,x):
-		jmlhpsn = x * 8000
-		print ("Harga mie goreng = Rp 8000")
-		print ("Total Seluruhnya = Rp ", jmlhpsn)
-		return jmlhpsn
-	def capcay (self,x):
-		jmlhpsn = x * 5000
-		print ("Harga capcay = Rp 5000")
-		print ("Total Seluruhnya = Rp ", jmlhpsn)
-		return jmlhpsn
-	
-class minuman():
-	def air_mineral (self,z):
-		jmlhpsn2 = z * 3000
-		print ("Harga Air Mineral = Rp 3000")
-		print ("Total Minuman = Rp ",jmlhpsn2)
-		return jmlhpsn2
-	def es_teh_manis (self,z):
-		jmlhpsn2 = z * 2000
-		print("Harga Es Teh Manis = Rp 2000")
-		print ("Total Minuman = Rp ",jmlhpsn2)
-		return jmlhpsn2
-	def es_jeruk (self,z):
-		jmlhpsn2 = z * 3500
-		print ("Harga Es Jeruk = Rp 3500")
-		print("Total Minuman = Rp ",jmlhpsn2)
-		return jmlhpsn2
-	def jus_alpukat (self,z):
-		jmlhpsn2 = z * 5000
-		print ("Harga Jus Alpukat = Rp 5000")
-		print ("Total Minuman = Rp ",jmlhpsn2)
-		return jmlhpsn2
-	def jus_mangga (self,z):
-		jmlhpsn2 = z * 4000
-		print ("Harga Jus Mangga = Rp 4000")
-		print ("Total Minuman = Rp ",jmlhpsn2)
-		return jmlhpsn2
-
-
 def back_menu():
 	print ('Apakah anda ingin memesan lagi? [Y/N] :')
 	back = input().upper()
 	if back == "Y":
 		menu_utama1()
 		pilihan()
-		print("")
 	else:
 		print("Terima Kasih !")
 		exit
